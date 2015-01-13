@@ -1,0 +1,287 @@
+*, *:after, *:before {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	vertical-align: top;
+}
+body{
+	background-image: url(../img/pokedex.jpg);
+	background-size: 100% auto;
+}
+.pantalla{
+	position: absolute;
+	height: calc(100% - 4em);
+	width: 100%;
+	margin-top: 4em;
+	overflow: hidden;
+}
+
+.menu{
+	width: 100%;
+	height: 4em;
+	text-align: center;
+	position: fixed;
+}
+
+.elemento-menu{
+	text-transform: uppercase;
+	color: #FFFFFF;
+	line-height: 4em;
+	height: 100%;
+	width: 25%;
+	display: inline-block;
+	border-right: 1px solid #FFFFFF;
+
+}
+.elemento-menu:last-child{border: none;}
+.elemento-menu:hover{
+	color: black;
+	border-bottom: red solid 0.5em;
+	background-color: white;
+	cursor: pointer;
+}
+.icono-listado{
+	width: 5%;
+}
+.parte-pokeball{
+	border: 0.5em solid;
+	border-color: black;
+	transition: all 1s;
+}
+.parte-arriba,
+.parte-abajo{
+	position: fixed;
+	width: 100%;
+	height: calc(50% + 0.5em);
+}
+.parte-arriba{
+	background-color: red;
+	border-left: 0;
+	border-right: 0;
+	border-top: 0;
+	z-index: 2;
+}
+.parte-centro{
+	background: linear-gradient(0deg, #ff0000 0%,#ff0000 45%,#000000 46%,#000000 50%, #ffffff 54%,#ffffff 55%,#ffffff 100%);
+	position: relative;
+	vertical-align: top;
+	text-align: center;
+	height: 6em;
+	width: 6em;
+	border-radius: 50%;
+	left: calc(50% - 3em);
+	top: calc(100% - 2.75em);
+}
+.centro-centro{
+	cursor: pointer;
+	background-color: white;
+	height: 3em;
+	width: 3em;
+	margin: 20% 0% 0% 20%;
+	border: 0.125em solid black;
+	border-radius: 50%;
+}
+.centro-centro:hover{background-color: red;}
+.parte-abajo{
+	z-index: 1;
+	background-color: white;
+	border-left: 0;
+	border-right: 0;
+	border-bottom: 0;
+	top: 50%;
+}
+.datos-entrenador{
+	height: 20%;	
+	background-color: rgba(0,0,0, 0.5);
+	color: white;
+}
+.datos-entrenador:hover{
+	cursor: pointer;
+	background-color: rgba(0,0,0, 0.9);
+}
+.zona-combate{
+	/*background-color: rgba(0,0,0,0.7);*/
+	width: 100%;
+	height: 80%;
+}
+.pokemons-luchando{
+	width: 100%;
+	height: 50%;
+	display: block;
+}
+.pokemon-luchando{
+	height: 100%;
+	width: auto;
+	max-width: 25%;
+}
+.pokemons-luchando:first-child .pokemon-luchando:first-child{
+	margin-left: 50%;
+}
+.pokemons-luchando:last-child .pokemon-luchando:last-child{
+	margin-right: 50%;
+}
+
+.datos-pokemon-luchando{
+	height: 100%;
+	width: 50%;
+	display: inline-block;
+	font-size: 1.5em;
+}
+
+.datos-principales,
+.ataques-pokemon{
+	display: inline-block;
+	width: 50%;
+	height: 100%;
+}
+
+.datos-principales .genero,
+.datos-principales .nombre,
+.datos-principales .nivel,
+.datos-principales .estado{
+	height: 33%;
+	display: inline-block;
+}
+.datos-principales .vida{
+	height: 34%;
+	background-color: green;
+	width: 100%;
+	font-weight: bolder;
+	text-align: center;
+}
+.ataques-pokemon{
+}
+
+/*PANTALLAS*/
+.pantalla-combates{
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	background-image: url(../img/estadio.png);
+}
+.pantalla-listas{
+	color: white;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	background-image: url(../img/pokeball1.jpg);
+}
+.pantalla-equipo{
+	color: white;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	background-image: url(../img/pokeballs.jpg);
+}
+/*TIPOS*/
+.ataque{
+	display: inline-block;
+	width: 45%;
+	height: 45%;
+	margin: 1.25%;
+	opacity: 0.9;
+	border-radius: 0.5em;
+}
+.ataque:hover{
+	opacity: 1;
+}
+.acero{background-color: #3399FF;}
+.agua{background-color: #AAAABB;}
+.bicho{background-color: #3399FF;}
+.dragon{background-color: #433297;}
+.electrico{background-color: #DDAA22;}
+.fantasma{background-color: #444488;}
+.fuego{background-color: #DD3322;}
+.hada{background-color: #FFAAFF;}
+.hielo{background-color: #77DDFF;}
+.lucha{background-color: #442211;}
+.normal{background-color: #655454;}
+.planta{background-color: #F9FAF9;}
+.psiquico{background-color: #774455;}
+.roca{background-color: #BBAA66;}
+.siniestro{background-color: #443322;}
+.tierra{background-color: #DCBA55;}
+.veneno{background-color: #453345;}
+.volador{background-color: #445566;}
+.desconocido{background-color: #68A090;}
+
+
+
+/*ESTADOS*/
+.estado{
+	border: 2px solid white;
+	border-radius: 1em;
+	color: white;
+	width: 33.33%;
+	height: 33%;
+	text-align: center;
+	font-weight: bolder;
+	text-transform: uppercase;
+}
+.par{background-color: yellow;}
+.que{background-color: red;}
+.env{background-color: purple;}
+.dor{background-color: gray;}
+.con{background-color: blue;}
+.deb{background-color: orange;}
+.pokerus{background-color: pink;}
+
+.confuso{background-color: gray;}
+.enamorado{background-color: pink;}
+.envenenado{background-color: purple;}
+.drenado{background-color: green;}
+.maldito{background-color: black;}
+.cantado{background-color: yellow;}
+.atrapado{background-color: brown;}
+
+
+
+
+
+/*ANIMACIONES Y EFECTOS ESPECIALES*/
+.oculto{display: none;}
+.espejo{transform: rotateY(180deg);}
+.girando{
+	animation-name: anim-girando;
+	animation-timing-function: linear;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+}
+@keyframes anim-girando {
+  from  {transform: rotateZ(0deg);}
+  to	{transform: rotateZ(359deg);}
+}
+.animacion{
+	animation-delay: 2s;
+	animation-duration: 1s;
+	animation-iteration-count: 1;
+	animation-direction: normal;
+ 	animation-timing-function: ease-in-out;
+}
+.hacia-arriba{
+ 	/*transform: translate(0%, calc(-100%));*/
+	animation-name: anim-hacia-arriba;
+}
+@keyframes anim-hacia-arriba {
+	from{transform: translate(0%, 0%);}
+	to	{transform: translate(0%, calc(-100%));}
+}
+.hacia-abajo{
+	/*transform: translate(0%, 100%);*/
+	animation-name: anim-hacia-abajo;
+}
+@keyframes anim-hacia-abajo {
+	from{transform: translate(0%, 0%);}
+	to	{transform: translate(0%, 100%);}
+}
+.lado-lado{
+	/*transform: translate(725%, 0%);*/
+	animation-delay: 2s;
+	animation-duration: 1s;
+	animation-iteration-count: 1;
+	animation-name: anim-lado-lado;
+	animation-timing-function: ease-in-out;
+}
+@keyframes anim-lado-lado {
+	from{transform: translate(0%, 0%);}
+	25%{transform: translate(-725%, 0%);}
+	75%	{transform: translate(725%, 0%);}
+	to{transform: translate(0%, 0%);}
+}
